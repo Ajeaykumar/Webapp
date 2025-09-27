@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Items - My Simple App{% endblock %}
+
+{% block content %}
+    <h1>Our Items</h1>
+    {% if items %}
+        <ul>
+            {% for item in items %}
+                <li><a href="/item/{{ item }}">{{ item }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No items to display yet. Why not <a href="/add_item">add one</a>?</p>
+    {% endif %}
+    <p><a href="/add_item">Add a new item</a></p>
+{% endblock %}

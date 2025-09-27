@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}View Item - My Simple App{% endblock %}
+
+{% block content %}
+    <h1>Viewing Item: {{ item }}</h1>
+    <p>This is a detail page for the item: <strong>{{ item }}</strong>.</p>
+    <p>You could add more details about the item here in a real application, like a description or price.</p>
+    <p><a href="/items">Back to Items</a></p>
+{% endblock %}
